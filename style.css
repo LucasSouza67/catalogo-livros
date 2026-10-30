@@ -1,0 +1,163 @@
+:root {
+  --fundo: #f4f1ec;
+  --painel: #ffffff;
+  --texto: #2b2622;
+  --suave: #6f665e;
+  --borda: #e2dcd3;
+  --destaque: #0a0300;
+  --destaque-escuro: #5e2e1e;
+  --erro: #b3261e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.4;
+}
+
+.topo {
+  background: var(--destaque);
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+.topo h1 { margin: 0 0 .25rem; font-size: 1.8rem; }
+.topo p { margin: 0; opacity: .85; }
+
+.layout {
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.painel {
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+h2 { margin: 0 0 1rem; font-size: 1.15rem; }
+
+label { display: block; margin: .75rem 0 .25rem; font-size: .85rem; font-weight: 600; }
+
+input, select {
+  width: 100%;
+  padding: .55rem .65rem;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+}
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid var(--destaque);
+  outline-offset: 1px;
+}
+
+button { font: inherit; cursor: pointer; border-radius: 8px; }
+
+.btn-principal {
+  width: 100%;
+  margin-top: 1rem;
+  padding: .65rem;
+  border: none;
+  background: var(--destaque);
+  color: #fff;
+  font-weight: 600;
+}
+.btn-principal:hover { background: var(--destaque-escuro); }
+
+.erros {
+  margin: 1rem 0 0;
+  padding: .6rem .6rem .6rem 1.8rem;
+  background: #fdecea;
+  color: var(--erro);
+  border-radius: 8px;
+  font-size: .85rem;
+}
+.erros[hidden] { display: none; }
+
+.resumo { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin: 0; }
+.resumo div { background: var(--fundo); border-radius: 8px; padding: .6rem; text-align: center; }
+.resumo dt { font-size: .8rem; color: var(--suave); }
+.resumo dd { margin: 0; font-size: 1.6rem; font-weight: 700; color: var(--destaque); }
+
+.filtros { display: grid; grid-template-columns: 1fr 220px; gap: .75rem; margin-bottom: 1rem; }
+
+.vazio {
+  text-align: center;
+  color: var(--suave);
+  padding: 2rem 1rem;
+  background: var(--painel);
+  border: 1px dashed var(--borda);
+  border-radius: 12px;
+}
+.vazio[hidden] { display: none; }
+
+.grade { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
+
+.card {
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.capa {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  background: var(--borda);
+}
+.capa-padrao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(160deg, var(--destaque), #c98b5c);
+}
+
+.card-corpo { padding: .75rem; display: flex; flex-direction: column; gap: .25rem; flex: 1; }
+.card h3 { margin: 0; font-size: 1rem; }
+.autor { margin: 0; font-size: .85rem; color: var(--suave); }
+.meta { margin: 0 0 .4rem; font-size: .8rem; color: var(--suave); }
+.card select { padding: .35rem; font-size: .85rem; }
+
+.btn-remover {
+  margin-top: .4rem;
+  padding: .35rem;
+  background: transparent;
+  border: 1px solid var(--erro);
+  color: var(--erro);
+  font-size: .85rem;
+}
+.btn-remover:hover { background: var(--erro); color: #fff; }
+
+.btn-editar, .btn-secundario {
+  padding: .35rem;
+  background: transparent;
+  border: 1px solid var(--destaque);
+  color: var(--destaque);
+  font-size: .85rem;
+}
+.btn-editar { margin-top: .4rem; }
+.btn-editar:hover, .btn-secundario:hover { background: var(--destaque); color: #fff; }
+.btn-secundario { width: 100%; margin-top: .5rem; padding: .55rem; }
+
+@media (max-width: 800px) {
+  .layout { grid-template-columns: 1fr; }
+  .filtros { grid-template-columns: 1fr; }
+}

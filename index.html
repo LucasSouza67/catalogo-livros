@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catálogo de Livros</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topo">
+    <h1>📚 Sua Estante de Livros</h1>
+    <p>Organize suas leituras em um só lugar.</p>
+  </header>
+
+  <main class="layout">
+    <aside class="lateral">
+      <section class="painel" aria-labelledby="titulo-form">
+        <h2 id="titulo-form">Cadastrar livro</h2>
+        <form id="form-livro" novalidate>
+          <label for="titulo">Título *</label>
+          <input id="titulo" type="text" placeholder="Ex.: Dom Casmurro" />
+
+          <label for="autor">Autor *</label>
+          <input id="autor" type="text" placeholder="Ex.: Machado de Assis" />
+
+          <label for="categoria">Categoria *</label>
+          <select id="categoria">
+            <option value="">Selecione...</option>
+          </select>
+
+          <label for="ano">Ano de publicação *</label>
+          <input id="ano" type="number" placeholder="Ex.: 1899" />
+
+          <label for="status-livro">Estado de leitura *</label>
+          <select id="status-livro">
+            <option value="quero-ler">Quero ler</option>
+            <option value="lendo">Lendo</option>
+            <option value="lido">Lido</option>
+          </select>
+
+          <label for="capa">URL da capa (opcional)</label>
+          <input id="capa" type="url" placeholder="https://..." />
+
+          <ul id="erros" class="erros" role="alert" hidden></ul>
+
+          <button type="submit" id="btn-salvar" class="btn-principal">Adicionar livro</button>
+          
+          <button type="button" id="btn-cancelar" class="btn-secundario" hidden>Cancelar edição</button>
+
+        </form>
+      </section>
+
+      <section class="painel" aria-labelledby="titulo-resumo">
+        <h2 id="titulo-resumo">Resumo</h2>
+        <dl class="resumo">
+          <div><dt>Total</dt><dd id="resumo-total">0</dd></div>
+          <div><dt>Quero ler</dt><dd id="resumo-quero-ler">0</dd></div>
+          <div><dt>Lendo</dt><dd id="resumo-lendo">0</dd></div>
+          <div><dt>Lidos</dt><dd id="resumo-lido">0</dd></div>
+        </dl>
+      </section>
+    </aside>
+
+    <section class="catalogo" aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo">Meus livros</h2>
+
+      <div class="filtros">
+        <input id="busca" type="search" placeholder="Buscar por título ou autor..." aria-label="Buscar livros" />
+        <select id="filtro-categoria" aria-label="Filtrar por categoria">
+          <option value="">Todas as categorias</option>
+        </select>
+      </div>
+
+      <p id="mensagem-vazia" class="vazio" hidden></p>
+      <div id="lista-livros" class="grade"></div>
+    </section>
+  </main>
+  <script src="dist/main.js" defer></script>
+</body>
+</html>
