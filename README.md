@@ -1,6 +1,6 @@
 # 📚 Catálogo de Livros
 
-Aplicação web para organizar um catálogo de livros, desenvolvida com HTML, CSS e TypeScript como projeto da disciplina de **Desenvolvimento Web**.
+Aplicação web para organizar um catálogo de livros, desenvolvida com HTML, CSS e TypeScript como projeto da disciplina de **Tópicos Especiais Em Projeto e Desenvolvimento Web**.
 
 ## 👤 Autor
 
