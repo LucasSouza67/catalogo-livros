@@ -41,13 +41,13 @@ const ROTULOS_STATUS: Record<Status, string> = {
   lido: "Lido",
 };
 
-// ===================== Estado (array tipado) =====================
+// ===================== Estado (meu array tipado) =====================
 let livros: Livro[] = carregarLivros();
 
 // modo cadastro: null | número = id do livro que está sendo editado
 let idEmEdicao: number | null = null;
 
-// ===================== Acesso ao DOM (tratando null) =====================
+// ===================== Acesso ao DOM =====================
 function obterElemento<T extends HTMLElement>(id: string): T {
   const elemento = document.getElementById(id);
   if (elemento === null) {
