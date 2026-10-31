@@ -4,7 +4,7 @@ Aplicação web para organizar um catálogo de livros, desenvolvida com HTML, CS
 
 ## 👤 Autor
 
-- **SEU NOME COMPLETO** — [@seu-usuario-github](https://github.com/seu-usuario-github)
+- **Lucas Souza Da Silva** — [@LucasSouza67](https://github.com/LucasSouza67)
 
 **Instituição:** Instituto Federal do Ceará - Campus Tianguá  
 **Disciplina:** Tópicos Especiais em Projeto e Desenvolvimento Web  
@@ -12,7 +12,7 @@ Aplicação web para organizar um catálogo de livros, desenvolvida com HTML, CS
 
 ## 🎥 Vídeo de apresentação
 
-[Assista ao vídeo no YouTube/Drive](https://youtu.be/GKcdFM9Zl4o)
+[Assista ao vídeo no YouTube](https://youtu.be/GKcdFM9Zl4o)
 
 ## 🎯 Objetivo
 
