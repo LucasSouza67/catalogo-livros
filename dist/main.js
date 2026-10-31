@@ -16,11 +16,11 @@ const ROTULOS_STATUS = {
     lendo: "Lendo",
     lido: "Lido",
 };
-// ===================== Estado (array tipado) =====================
+// ===================== Estado (meu array tipado) =====================
 let livros = carregarLivros();
 // modo cadastro: null | número = id do livro que está sendo editado
 let idEmEdicao = null;
-// ===================== Acesso ao DOM (tratando null) =====================
+// ===================== Acesso ao DOM =====================
 function obterElemento(id) {
     const elemento = document.getElementById(id);
     if (elemento === null) {

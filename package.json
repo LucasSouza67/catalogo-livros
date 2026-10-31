@@ -1,0 +1,14 @@
+{
+  "name": "catalogo-livros",
+  "version": "1.0.0",
+  "description": "Catálogo de livros em HTML, CSS e TypeScript",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "keywords": ["typescript", "catalogo", "livros"],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.6.0"
+  }
+}
